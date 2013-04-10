@@ -7,7 +7,7 @@
 (setq visible-bell +1)
 (global-linum-mode +1)
 (global-hl-line-mode +1)
-(electric-pair-mode +1)
+(ido-mode +1)
 
 ;; Display time and date.
 (setq display-time-day-and-date t)
@@ -39,5 +39,5 @@
       kept-new-versions 20  ; how many of the newest versions to keep
       kept-old-versions 5   ; and how many of the old
 )
-  
-(ido-mode +1)
+
+(require 'init-org)
