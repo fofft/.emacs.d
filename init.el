@@ -2,6 +2,7 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; General settings.
+(setq confirm-kill-emacs 'yes-or-no-p)
 (setq inhibit-startup-message +1)
 (setq tool-bar-mode nil)
 (setq visible-bell +1)
