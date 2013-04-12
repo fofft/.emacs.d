@@ -11,7 +11,6 @@
   ;; TODO: Put in check and create new year / month folders if they don't exist.
   (if (not (file-exists-p fullFileName))
       (write-region (format-time-string "%Y-%m-%d %A %T") nil fullFileName))
-
   (find-file fullFileName))
 
 (provide 'init-org)
