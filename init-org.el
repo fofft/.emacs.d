@@ -20,4 +20,12 @@
 	(sequence "ASSIGNED(a)" "FEEDBACK(f)" "|" "RESOLVED(r)") ;; work
 	))
 
+(defun check-for-clock-out-note()
+  (interactive)
+  (save-excursion
+    (org-back-to-heading)
+    (org-add-note)))
+
+(add-hook 'org-clock-out-hook 'check-for-clock-out-note)
+
 (provide 'init-org)
