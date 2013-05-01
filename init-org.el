@@ -1,3 +1,5 @@
+(add-hook 'org-mode-hook 'flyspell-mode)
+
 (defun daily-log-file-name ()
   "For daily log files, returns file name with today's date."
   (setq folderPath  (format "~/.emacs.d/org/%s"
@@ -22,6 +24,11 @@
       '((sequence "TODO(t)" "|" "DONE(d)") ;; general
 	(sequence "ASSIGNED(a)" "FEEDBACK(f)" "|" "RESOLVED(r)") ;; work
 	))
+
+(setq org-goto-interface 'outline-path-completion
+      org-goto-max-level 10)
+
+(setq org-hide-leading-stars +1)
 
 (defun check-for-clock-out-note()
   (interactive)
