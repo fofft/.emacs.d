@@ -7,8 +7,12 @@
 (setq tool-bar-mode nil)
 (setq visible-bell +1)
 (global-linum-mode +1)
-(global-hl-line-mode +1)
 (ido-mode +1)
+
+;; setting aspell for ispell
+(custom-set-variables
+ '(ispell-dictionary "english")
+ '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe"))
 
 ;; Display time and date.
 (setq display-time-day-and-date t)
