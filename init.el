@@ -1,5 +1,13 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
+(require 'init-packages)
+(require 'init-org)
+
+;;smex settings
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; General settings.
 (setq confirm-kill-emacs 'yes-or-no-p)
@@ -10,9 +18,11 @@
 (ido-mode +1)
 
 ;; setting aspell for ispell
-(custom-set-variables
- '(ispell-dictionary "english")
- '(ispell-program-name "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe"))
+(setq windows-ispell-dictionary "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe")
+(if (file-exists-p windows-ispell-dictionary)
+    (custom-set-variables
+     '(ispell-dictionary "english")
+     '(ispell-program-name windows-ispell-dictionary)))
 
 ;; Display time and date.
 (setq display-time-day-and-date t)
@@ -44,5 +54,3 @@
       kept-new-versions 20  ; how many of the newest versions to keep
       kept-old-versions 5   ; and how many of the old
 )
-
-(require 'init-org)

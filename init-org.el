@@ -1,5 +1,7 @@
 (add-hook 'org-mode-hook 'flyspell-mode)
 
+(setq org-agenda-files (list "~/.emacs.d/org/"))
+
 (defun daily-log-file-name ()
   "For daily log files, returns file name with today's date."
   (setq folderPath  (format "~/.emacs.d/org/%s"
