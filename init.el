@@ -45,6 +45,8 @@
 (setq show-paren-style 'parenthesis)
 (show-paren-mode +1)
 
+(add-to-list 'auto-mode-alist '("\\.bat\\'" . batch-mode))
+
 ;; Keep back ups to their own folder.
 ;; From StackOverflow (http://stackoverflow.com/questions/2680389/how-to-remove-all-files-ending-with-made-by-emacs).
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup/"))

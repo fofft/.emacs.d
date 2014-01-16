@@ -6,6 +6,7 @@
 
 (setq packages-used '(org
 		      smex
+		      batch-mode
 		      ))
 
 (mapc
