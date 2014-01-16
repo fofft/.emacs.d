@@ -2,6 +2,7 @@
 
 (require 'init-packages)
 (require 'init-org)
+(require 'init-twit)
 
 ;;smex settings
 (global-set-key (kbd "M-x") 'smex)
