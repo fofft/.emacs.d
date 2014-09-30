@@ -46,6 +46,9 @@
 (setq show-paren-style 'parenthesis)
 (show-paren-mode +1)
 
+;; Load theme
+(load-theme 'afternoon)
+
 (add-to-list 'auto-mode-alist '("\\.bat\\'" . batch-mode))
 
 ;; Keep back ups to their own folder.
@@ -58,12 +61,21 @@
       kept-old-versions 5   ; and how many of the old
 )
 
+(defvar timestamp-format "%Y-%m-%d %H:%M:%S")
+
+(defun timestamp ()
+  (interactive)
+  (insert (format-time-string timestamp-format(current-time) "\n")
+	  )
+  (insert "\n")
+  )
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "9f443833deb3412a34d2d2c912247349d4bd1b09e0f5eaba11a3ea7872892000" default)))
+ '(custom-safe-themes (quote ("f0ea6118d1414b24c2e4babdc8e252707727e7b4ff2e791129f240a2b3093e32" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "9f443833deb3412a34d2d2c912247349d4bd1b09e0f5eaba11a3ea7872892000" default)))
  '(ispell-dictionary "english")
  '(ispell-program-name windows-ispell-dictionary))
 (custom-set-faces
