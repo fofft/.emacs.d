@@ -1,4 +1,6 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/"))
+(package-initialize)
+
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/"))
 
 (require 'init-packages)
 (require 'init-local)
@@ -46,9 +48,6 @@
 (setq show-paren-style 'parenthesis)
 (show-paren-mode +1)
 
-;; Load theme
-(load-theme 'afternoon)
-
 (add-to-list 'auto-mode-alist '("\\.bat\\'" . batch-mode))
 
 ;; Keep back ups to their own folder.
@@ -75,12 +74,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("f0ea6118d1414b24c2e4babdc8e252707727e7b4ff2e791129f240a2b3093e32" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "9f443833deb3412a34d2d2c912247349d4bd1b09e0f5eaba11a3ea7872892000" default)))
- '(ispell-dictionary "english")
- '(ispell-program-name windows-ispell-dictionary))
+ '(custom-safe-themes
+   (quote
+    ("28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
+ '(package-selected-packages (quote (batch-mode smex))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;; Load theme
+(load-theme 'afternoon)
