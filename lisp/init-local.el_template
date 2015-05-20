@@ -1,0 +1,7 @@
+;; Set variables used in other init files that are machine specific.
+;; C-x C-w to save as init-local.el and change variables to match current machine.
+
+(setq local-dropbox "")
+(setq local-desktop "")
+
+(provide 'init-local)
