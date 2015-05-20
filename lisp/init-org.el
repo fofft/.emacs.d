@@ -1,3 +1,4 @@
+(require 'init-local)
 (require 'org)
 (require 'org-install)
 (add-to-list 'org-modules "org-habit")
@@ -24,7 +25,7 @@
 (setq org-log-done 'time)
 
 (load-library "find-lisp")
-(setq org-agenda-files (find-lisp-find-files "C:/Users/wlc/Dropbox/Notes" "\.org$"))
+(setq org-agenda-files (find-lisp-find-files local-dropbox "\.org$"))
 
 (defun check-for-clock-out-note()
   (interactive)
