@@ -34,12 +34,10 @@
     (org-add-note)))
 (add-hook 'org-clock-out-hook 'check-for-clock-out-note)
 
-(defun todo()
-  (interactive)
-  (find-file (concat local-dropbox "/TODO.org")))
+(setq org-agenda-custom-commands
+      '(("w" "Work" tags-todo "work")))
 
-(defun todo-local()
-  (interactive)
-  (find-file (concat local-desktop "/TODO.org")))
+(setq org-agenda-custom-commands
+      '(("u" "School" tags-todo "school")))
 
 (provide 'init-org)
