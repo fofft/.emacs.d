@@ -35,9 +35,7 @@
 (add-hook 'org-clock-out-hook 'check-for-clock-out-note)
 
 (setq org-agenda-custom-commands
-      '(("w" "Work" tags-todo "work")))
-
-(setq org-agenda-custom-commands
-      '(("u" "School" tags-todo "school")))
+      '(("w" "Work" tags-todo "work")
+	("u" "School" tags-todo "work")))
 
 (provide 'init-org)
