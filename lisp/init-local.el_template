@@ -2,6 +2,7 @@
 ;; C-x C-w to save as init-local.el and change variables to match current machine.
 
 (setq local-dropbox "")
+(setq local-aspell-exe "")
 (setq local-desktop "")
 
 (provide 'init-local)

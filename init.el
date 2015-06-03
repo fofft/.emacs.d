@@ -22,7 +22,7 @@
 (ido-mode +1)
 
 ;; setting aspell for ispell
-(setq windows-ispell-dictionary "C:\\Program Files (x86)\\Aspell\\bin\\aspell.exe")
+(setq windows-ispell-dictionary local-aspell-exe)
 (if (file-exists-p windows-ispell-dictionary)
     (custom-set-variables
      '(ispell-dictionary "english")
