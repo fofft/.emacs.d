@@ -7,9 +7,11 @@
 
 (package-initialize)
 
-(setq packages-used '(org
+(setq packages-used '(afternoon-theme
+		      org
 		      smex
 		      batch-mode
+		      twittering-mode
 		      ))
 
 (mapc
