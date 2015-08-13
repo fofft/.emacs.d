@@ -36,6 +36,7 @@
 
 (setq org-agenda-custom-commands
       '(("w" "Work" tags-todo "work")
-	("u" "School" tags-todo "school")))
+	("u" "School" tags-todo "school")
+	("d" "Daily" tags-todo "daily|weekly|monthly")))
 
 (provide 'init-org)
