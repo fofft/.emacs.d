@@ -4,5 +4,7 @@
 (setq local-dropbox "")
 (setq local-aspell-exe "")
 (setq local-desktop "")
+(setq local-cygwin-bin "")
+(setq local-cygwin-root "")
 
 (provide 'init-local)
