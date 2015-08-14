@@ -6,7 +6,7 @@
 (require 'init-local)
 (require 'init-org)
 (require 'init-twit)
-(require 'init-cygwin)
+(require 'init-ack)
 
 ;;smex settings
 (global-set-key (kbd "M-x") 'smex)
