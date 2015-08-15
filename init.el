@@ -22,6 +22,10 @@
 (global-linum-mode +1)
 (ido-mode +1)
 
+;; When splitting the window, focus on new window.
+(global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
+(global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
+
 ;; setting aspell for ispell
 (setq windows-ispell-dictionary local-aspell-exe)
 (if (file-exists-p windows-ispell-dictionary)
