@@ -24,6 +24,8 @@
 
 (setq org-log-done 'time)
 
+(define-key org-mode-map "\M-q" 'toggle-truncate-lines)
+
 (load-library "find-lisp")
 (setq org-agenda-files (find-lisp-find-files local-dropbox "\.org$"))
 
