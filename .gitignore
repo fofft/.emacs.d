@@ -7,3 +7,4 @@
 /url
 /*.bak
 /lisp/init-local.el
+/lisp/init-custom.el
