@@ -1,13 +1,14 @@
 (require 'package)
-(add-to-list 'package-archives
-	     '("marmalade" . "http://marmalade-repo.org/packages/"))
-
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.milkbox.net/packages/"))
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.org/packages/")
+			 ))
 
 (package-initialize)
 
-(setq packages-used '(afternoon-theme
+(setq packages-used '(ack
+		      afternoon-theme
+		      ess
 		      org
 		      smex
 		      batch-mode
@@ -18,6 +19,7 @@
  (lambda (package)
    (or (package-installed-p package)
        (if (y-or-n-p (format "Package %s is missing.  Install it? " package))
+	   (package-refresh-contents)
 	   (package-install package))))
  packages-used)
 
