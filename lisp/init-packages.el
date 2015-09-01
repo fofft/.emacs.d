@@ -19,8 +19,9 @@
  (lambda (package)
    (or (package-installed-p package)
        (if (y-or-n-p (format "Package %s is missing.  Install it? " package))
-	   (package-refresh-contents)
-	   (package-install package))))
+	   (progn
+	     (package-refresh-contents)
+	     (package-install package)))))
  packages-used)
 
 (provide 'init-packages)
