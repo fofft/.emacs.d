@@ -8,10 +8,11 @@
 
 (setq packages-used '(ack
 		      afternoon-theme
+		      batch-mode
 		      ess
 		      org
+		      org-journal
 		      smex
-		      batch-mode
 		      twittering-mode
 		      ))
 

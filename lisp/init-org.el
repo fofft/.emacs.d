@@ -1,6 +1,8 @@
 (require 'init-local)
 (require 'org)
 (require 'org-install)
+(require 'org-journal)
+
 (add-to-list 'org-modules "org-habit")
 
 (add-hook 'org-mode-hook 'flyspell-mode)
@@ -9,6 +11,9 @@
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+(setq org-journal-dir local-dropbox-notes)
+(setq org-journal-file-format "%Y%m%d.org")
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "|" "DONE(d)") ;; general
@@ -34,6 +39,7 @@
   (save-excursion
     (org-back-to-heading)
     (org-add-note)))
+
 (add-hook 'org-clock-out-hook 'check-for-clock-out-note)
 
 (setq org-agenda-custom-commands
