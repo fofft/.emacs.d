@@ -6,5 +6,9 @@
 /org
 /url
 /*.bak
+/ido.last
+/recentf
+/smex-items
+/lisp/*~
 /lisp/init-local.el
 /lisp/init-custom.el
