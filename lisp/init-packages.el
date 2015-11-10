@@ -10,6 +10,7 @@
 		      afternoon-theme
 		      batch-mode
 		      ess
+		      js2-mode
 		      org
 		      org-journal
 		      smex
