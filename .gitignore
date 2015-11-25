@@ -9,6 +9,7 @@
 /ido.last
 /recentf
 /smex-items
+/custom-lisp/
 /lisp/*~
 /lisp/init-local.el
 /lisp/init-custom.el
