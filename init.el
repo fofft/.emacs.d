@@ -23,6 +23,9 @@
 (global-linum-mode +1)
 (ido-mode +1)
 
+;; LaTex Settings
+(setq LaTeX-command-style '(("" "%(PDF)%(latex) -file-line-error %S%(PDFout)")))
+
 ;; When splitting the window, focus on new window.
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
 (global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
