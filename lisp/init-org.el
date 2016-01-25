@@ -12,7 +12,9 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-(setq org-journal-dir local-dropbox-notes)
+(setq org-journal-dir (concat local-dropbox-notes
+			      (format-time-string "%Y/%m/")))
+
 (setq org-journal-file-format "%Y%m%d.org")
 
 (setq org-todo-keywords
