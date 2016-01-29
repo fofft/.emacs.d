@@ -8,10 +8,13 @@
 
 (setq packages-used '(ack
 		      afternoon-theme
+		      auto-complete
+		      auto-complete-auctex
 		      batch-mode
 		      ess
 		      f
 		      js2-mode
+		      magit
 		      org
 		      org-journal
 		      smex
