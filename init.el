@@ -8,6 +8,7 @@
 (require 'init-org)
 (require 'init-twit)
 (require 'init-ack)
+(require 'init-tex)
 
 ;;smex settings
 (global-set-key (kbd "M-x") 'smex)
@@ -22,9 +23,6 @@
 (setq visible-bell +1)
 (global-linum-mode +1)
 (ido-mode +1)
-
-;; LaTex Settings
-(setq LaTeX-command-style '(("" "%(PDF)%(latex) -file-line-error %S%(PDFout)")))
 
 ;; When splitting the window, focus on new window.
 (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
