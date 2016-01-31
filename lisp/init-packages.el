@@ -6,7 +6,8 @@
 
 (package-initialize)
 
-(setq packages-used '(ack
+(setq packages-used '(ac-math
+		      ack
 		      afternoon-theme
 		      auto-complete
 		      auto-complete-auctex
