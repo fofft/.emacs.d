@@ -77,44 +77,6 @@
   (insert "\n")
   )
 
-;; Tabs
-;; http://blog.binchen.org/posts/easy-indentation-setup-in-emacs-for-web-development.html
-(defun my-setup-indent (n)
-  ;; java/c/c++
-  (setq c-basic-offset n)
-  ;; web development
-  (setq coffee-tab-width n) ; coffeescript
-  (setq javascript-indent-level n) ; javascript-mode
-  (setq js-indent-level n) ; js-mode
-  (setq js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
-  (setq web-mode-markup-indent-offset n) ; web-mode, html tag in html file
-  (setq web-mode-css-indent-offset n) ; web-mode, css in html file
-  (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
-  (setq css-indent-offset n) ; css-mode
-  )
-
-(defun my-office-code-style ()
-  (interactive)
-  (message "Office code style!")
-  (setq indent-tabs-mode t) ; use tab instead of space
-  (my-setup-indent 4) ; indent 4 spaces width
-  )
-
-(defun my-personal-code-style ()
-  (interactive)
-  (message "My personal code style!")
-  (setq indent-tabs-mode nil) ; use space instead of tab
-  (my-setup-indent 4) ; indent 4 spaces width
-  )
-
-(defun my-setup-develop-environment ()
-  (interactive)
-  (my-office-code-style)
-  )
-
-;; prog-mode-hook requires emacs24+
-(add-hook 'prog-mode-hook 'my-setup-develop-environment)
-
 (setq custom-file "~/.emacs.d/lisp/init-custom.el")
 (load custom-file)
 
