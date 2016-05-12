@@ -55,4 +55,8 @@
 	("r" "Recommendations" tags-todo "recommendations")
 	))
 
+(setq org-agenda-start-day "+0d")
+(setq org-agenda-span 7)
+(setq org-agenda-start-on-weekday nil)
+
 (provide 'init-org)
