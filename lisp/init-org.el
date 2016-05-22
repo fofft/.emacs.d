@@ -56,7 +56,7 @@
 	))
 
 (setq org-agenda-start-day "+0d")
-(setq org-agenda-span 7)
+(setq org-agenda-span 11)
 (setq org-agenda-start-on-weekday nil)
 
 (provide 'init-org)
