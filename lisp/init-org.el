@@ -48,7 +48,7 @@
       '(
 	("a" "Agenda + TODO" (
 	 (agenda "")
-	 (tags-todo "-recommendations-goals")))
+	 (tags-todo "-recommendations-goals-events")))
 	("w" "Work" tags-todo "work")
 	("u" "School" tags-todo "school")
 	("d" "Daily" tags-todo "daily|weekly|monthly")
